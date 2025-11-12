@@ -1,4 +1,6 @@
-import banner_1 from '../../assets/img/skin_care_banner_resized.png'
+import banner_1 from '../../assets/img/header-skincare-01.jpg'
+import banner_2 from '../../assets/img/ChatGPT Image 12_11_2025, 17_10_31.png'
+import banner_3 from '../../assets/img/ChatGPT Image 12_11_2025, 17_10_34.png'
 import tonico_facial from '../../assets/img/Tónico Facial Luméa em Detalhe.png'
 import hidratante_facial from '../../assets/img/Hidratante Facial Luméa em Detalhe.png'
 import protetor_solar from '../../assets/img/ChatGPT Image 25_09_2025, 14_17_51.png'
@@ -9,72 +11,79 @@ import mascara_facial from '../../assets/img/ChatGPT Image 25_09_2025, 14_57_03.
 import agua_micelar from '../../assets/img/ChatGPT Image 25_09_2025, 15_03_44.png'
 import antissinais_reparador from '../../assets/img/Creme Anti-Rugas Luméa em Foco.png'
 import './Produtos.css'
+import { useEffect, useState } from 'react'
+import { getSkinCare } from '../../services/SkinCareServices'
+import type { SkinCare } from '../../types/SkinCare'
 
-<main>
-    <section className={banner_1}></section>
-    <section className="container"></section>
-    <h1 className="acessivel">produtos de skin care</h1>
-    <div className="titulo">
-        <span>Skin Care</span>
-        < hr />
-    </div>
+export default function Produtos() {
 
-    <section className="cards">
-        <div className="card">
-            <img src={tonico_facial} alt="Produto Tônico Facial Luméa" />
-            <h2>Tônico Facial</h2>
-            <p>Controle do brilho, remove as impurezas e minimiza o excesso de brilho do rosto.</p>
-        </div>
+    const [skinCare, setSkinCare] = useState<SkinCare[]>([]);
 
-        <div className="card">
-            <img src={hidratante_facial} alt="Produto Hidratante Facial Luméa" />
-            <h2>Hidratante Facial</h2>
-            <p>Oferece uma solução abrangente para manter a sua pele saudável.</p>
-        </div>
+    const fetchSkincare = async () => {
+        try {
+            const dados = await getSkinCare();
+            console.log("Lista de Produtos vinda da API: ", dados);
+            setSkinCare(dados);
+        } catch (error) {
+            console.error("Erro ao executar getSkinCare: ", error);
+        }
+    }
 
-        <div className="card">
-            <img src={protetor_solar} alt="Produto Protetor Solar Luméa" />
-            <h2>Protetor Solar</h2>
-            <p>Oferece alta proteção ao sol. Toque seco de rápida absorção. </p>
-        </div>
+    useEffect(() => {
+        fetchSkincare();
+    }, [])
 
-        <div className="card">
-            <img src={esfoliante_corporal} alt="Produto Esfoliante Corporal Luméa" />
-            <h2>Esfoliante Corporal</h2>
-            <p>Body Scrub, esfolia e hidrata, removendo profundamente as impurezas da pele</p>
-        </div>
+    return (
+        <main>
+            {/* <section className={banner_1}></section>
+            <section className="container"></section> */}
+            <div id="carouselExampleIndicators" className="carousel slide" data-bs-ride="carousel">
+                <div className="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div className="carousel-inner">
+                    <div className="carousel-item active">
+                        <img src={banner_1} className="d-block w-100" alt="..." />
+                    </div>
+                    <div className="carousel-item">
+                        <img src={banner_2} className="d-block w-100" alt="..." />
+                    </div>
+                    <div className="carousel-item">
+                        <img src={banner_3} className="d-block w-100" alt="..." />
+                    </div>
+                </div>
+                <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span className="visually-hidden">Previous</span>
+                </button>
+                <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span className="visually-hidden">Next</span>
+                </button>
+            </div>
+            <h1 className="acessivel">produtos de skin care</h1>
+            <div className="titulo">
 
-        <div className="card">
-            <img src={oleo_corporal} alt="Produto Óleo Corporal Luméa" />
-            <h2>Óleo Corporal</h2>
-            <p>Body Oil realça o brilho natural da pele, deixando-a macia e hidratada o dia todo.</p>
-        </div>
+                <span>Skin Care</span>
+                < hr />
+            </div>
 
-        <div className="card">
-            <img src={sabonete_corporal} alt="Produto Sabonete Corporal Luméa" />
-            <h2>Sabonete Corporal </h2>
-            <p>Suavité limpa mas sem agredir a pele, removendo as células mortas.</p>
-        </div>
+            <section className="cards">
+                {
+                    skinCare.map((sk: SkinCare) => (
+                        <div className="card_produto">
+                            <img src={`http://localhost:3000/static/${sk.imagens[0]}`} alt="" />
+                            <h2>{sk.nome}</h2>
+                            <p>{sk.descricao}</p>
+                        </div>
+                    )
 
-        <div className="card">
-            <img src={mascara_facial} alt="Produto Mascara Facial Luméa" />
-            <h2>Mascara Facial</h2>
-            <p>Radiance Glow foi desenvolvida para revitalizar e iluminar a pele em poucos minutos.</p>
-        </div>
+                    )
+                }
+            </section>
 
-        <div className="card">
-            <img src={agua_micelar} alt="Produto Água Micelar Luméa" />
-            <h2>Água Micelar</h2>
-            <p>Micellar Water remove impurezas, maquiagem e oleosidade sem agredir a pele.</p>
-        </div>
-
-        <div className="card">
-            <img className="creme" src={antissinais_reparador}
-                alt="Produto Antissinais Reparador" />
-            <h2>Antissinais Reparador</h2>
-            <p>Anti-Wrinkle Cream foi desenvolvido para reparar, hidratar e restaurar a firmeza da pele.
-            </p>
-        </div>
-    </section>
-
-</main>
+        </main>
+    )
+}
