@@ -1,0 +1,53 @@
+header {
+    background-color: #95BCEA;
+    height: 120px;
+}
+
+.container_cabecalho {
+    display: flex;
+    justify-content: space-between;
+    max-width: 90%;
+    width: 1440px;
+    margin: 0 auto;
+    height: 100%;
+    align-items: end;
+}
+
+.icone_lupa {
+    cursor: pointer;
+    height: 30px;
+    display: flex;
+    justify-self: center;
+    margin-bottom: 15px;
+}
+
+.icone_user {
+    cursor: pointer;
+    height: 30px;
+    display: flex;
+    justify-self: center;
+    margin-bottom: 15px;
+}
+
+nav a {
+    font-family: "Tangerine", cursive;
+    text-decoration: none;
+    color: #000000;
+    font-size: 30px;
+}
+
+.container_direita {
+    display: flex;
+    gap: 40px;
+
+}
+
+.container_esquerda {
+    display: flex;
+    gap: 40px;
+}
+
+.logo {
+    width: 110px;
+}
+

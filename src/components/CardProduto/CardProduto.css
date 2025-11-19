@@ -1,0 +1,42 @@
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10%;
+    justify-content: center;
+}
+
+.card_produto {
+    width: 350px;
+    height: 500px;
+    background-color: #E6EFFA;
+    border-radius: 30px;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-bottom: 10px;
+    margin-bottom: 100px;
+    box-shadow: 0 4px 4px 2px #00000025;
+    border: solid 2px #95BCEA;
+}
+
+.card_produto img {
+    width: 60%;
+}
+
+.creme {
+    margin-top: 100px;
+}
+
+.card_produto p {
+    font-size: 18px;
+    width: 90%;
+    font-family: "Raleway Dots", sans-serif;
+    font-weight: 900;
+}
+
+.card_produto h2 {
+    font-family: "Bona Nova SC", serif;
+}
