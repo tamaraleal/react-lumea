@@ -2,9 +2,11 @@ import { useNavigate } from 'react-router-dom';
 import './Header.css'
 import { Nav, Navbar } from 'react-bootstrap';
 import { useState } from 'react';
+import lumea_logo from '../../assets/img/logo.png'
 
 export default function Header() {
-    const [pesquisa, setPesquisa] = useState<String>("");
+    const [pesquisa, setPesquisa] = useState<string>("");
+    const [fechado, setFechado] = useState(true);
     const navigate = useNavigate();
 
     const handleSearch = () => {
@@ -26,12 +28,32 @@ export default function Header() {
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="me-auto conteudo-nav">
                         <div className="cab_col1">
-                            <Nav.Item>
-                                <svg className="icone_lupa" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 640 640">
-                                    <path fill="currentColor"
-                                        d="M448 272C448 174.8 369.2 96 272 96C174.8 96 96 174.8 96 272C96 369.2 174.8 448 272 448C369.2 448 448 369.2 448 272zM407.3 430C371 461.2 323.7 480 272 480C157.1 480 64 386.9 64 272C64 157.1 157.1 64 272 64C386.9 64 480 157.1 480 272C480 323.7 461.2 371 430 407.3L571.3 548.7C577.5 554.9 577.5 565.1 571.3 571.3C565.1 577.5 554.9 577.5 548.7 571.3L407.3 430z" />
-                                </svg>
+                            <Nav.Item className="barra_pesquisa_container">
+                                <input
+                                    name='busca'
+                                    type="text"
+                                    placeholder="Pesquisar..."
+                                    value={pesquisa} // Controla o valor do campo usando o estado pesquisa
+                                    onChange={(e) => setPesquisa(e.target.value)} // atualiza o estado pesquisa toda vez que o usuário digita
+                                    onKeyDown={handleKeyDown} // ativa a função quando uma tecla é pressionada no campo
+                                    className={`form-control campo_pesquisa ${fechado ? "campo_pesquisa_f" : "campo_pesquisa_a"}`} 
+                                />
+
+                                <button
+                                    onClick={() => {
+                                        setFechado(!fechado);
+                                        handleSearch();
+                                    }}
+                                    className="btn-pesquisa"
+                                    aria-label="Botão de Pesquisa"
+                                >
+
+                                    <svg className="icone_lupa" xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 640 640">
+                                        <path fill="currentColor"
+                                            d="M448 272C448 174.8 369.2 96 272 96C174.8 96 96 174.8 96 272C96 369.2 174.8 448 272 448C369.2 448 448 369.2 448 272zM407.3 430C371 461.2 323.7 480 272 480C157.1 480 64 386.9 64 272C64 157.1 157.1 64 272 64C386.9 64 480 157.1 480 272C480 323.7 461.2 371 430 407.3L571.3 548.7C577.5 554.9 577.5 565.1 571.3 571.3C565.1 577.5 554.9 577.5 548.7 571.3L407.3 430z" />
+                                    </svg>
+                                </button>
                             </Nav.Item>
 
                             <Nav.Item>
@@ -45,7 +67,7 @@ export default function Header() {
                         </div>
 
                         <Nav.Item>
-                            <img className="lumea_logo" src="./assets/ChatGPT Image 20 de set. de 2025, 17_05_45 1 (1).svg" alt="Logo" />
+                            <img className="lumea_logo" src={lumea_logo} alt="Logo" />
                         </Nav.Item>
 
                         <div className="col_col3">
@@ -70,6 +92,6 @@ export default function Header() {
                 </Navbar.Collapse>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" className='ms-auto' />
             </Navbar>
-        </header>
+        </header >
     )
 }

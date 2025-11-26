@@ -3,7 +3,7 @@
   margin: 0;
   border: 0;
   box-sizing: border-box;
-  font-family: "Bona Nova SC", serif;
+  font-family: "Darker Grotesque", sans-serif;
 }
 
 :root {
@@ -13,7 +13,7 @@
   --corFontEscura: #000000;
   --alturaRodapé: 60px;
   --fontLogo: font-family: "Tangerine", cursive;
-  --fontComplementar:  font-family: "Bona Nova SC", serif;
+  --fontComplementar: font-family: "Bona Nova SC", serif;
 }
 
 body {
