@@ -7,10 +7,10 @@ export default function CardProduto({nome, descricao, preco, imagem, id, peso}: 
 
     return (
         <div key={id} className="card_produto">
-            <img src={(imagem.length > 0) ? `http://localhost:3000/static${imagem}` : skin_default} alt="Imagem Produto" />
+            <img src={(imagem.length > 0) ? `http://localhost:3000/static/${imagem}` : skin_default} alt="Imagem Produto" />
             <h2>{nome}</h2>
             <p>{(descricao.length > 0) ? descricao : "Descrição não cadastrada"}</p>
-            <div>
+            <div className='info_produtos'>
                 <span>{formatoServices.PrecoBR(preco)}</span> <br />
                 <span>{(peso != null) ? formatoServices.PesoEmKg(peso) : "qtde não informada"}</span>
             </div>
