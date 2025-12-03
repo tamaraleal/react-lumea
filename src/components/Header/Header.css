@@ -1,5 +1,5 @@
 header {
-    background-color: #95BCEA;
+    background-color: var(--corPrincipal)
 }
 
 .container_cabecalho {
@@ -61,12 +61,12 @@ header {
     height: 20px;
     margin: 0;
     margin-top: 1px;
+    fill: var(--corBackground);
 }
 
 .icone_lupa {
     cursor: pointer;
     height: 30px;
-    fill: #000000;
 }
 
 .container_esquerda {
@@ -77,7 +77,7 @@ header {
 nav a {
     font-family: "Tangerine", cursive;
     text-decoration: none;
-    color: #000000;
+    color: var(--corBackground);
     font-size: 30px;
 }
 
@@ -85,8 +85,9 @@ nav a {
     cursor: pointer;
     height: 30px;
     display: flex;
-    justify-self: center;
+    justify-self: end;
     margin-bottom: 15px;
+    fill: var(--corBackground);
 }
 
 .container_direita {

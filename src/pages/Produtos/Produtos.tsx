@@ -6,6 +6,7 @@ import CardProduto from '../../components/CardProduto/CardProduto'
 import Carrossel from '../../components/Carrossel/Carrossel'
 import Header from '../../components/Header/Header'
 import { useLocation } from 'react-router-dom'
+import Footer from '../../components/Footer/Footer'
 
 export default function Produtos() {
     const [skinCare, setSkinCare] = useState<SkinCare[]>([]);
@@ -37,37 +38,38 @@ export default function Produtos() {
         console.log("Termo pesquisado: ", termo_pesquisado);
     }, [termo_pesquisado])
 
-        return (
-            <>
-                <Header />
-                <main>
-                    <Carrossel />
-                    <h1 className="acessivel">produtos de skin care</h1>
-                    <div className="titulo">
+    return (
+        <>
+            <Header />
+            <main>
+                <Carrossel />
+                <h1 className="acessivel">produtos de skin care</h1>
+                <div className="titulo">
 
-                        <span>
-                            {
-                                termo_pesquisado ? `Resultados para: ${termo_pesquisado}` : "Skin Care"
-                            }
-                        </span>
-                        < hr />
-                    </div>
-
-                    <section className="cards">
+                    <span>
                         {
-                            skinCare.map((sk: SkinCare) => (
-                                <CardProduto
-                                    key={sk.id}
-                                    nome={sk.nome}
-                                    descricao={sk.descricao}
-                                    preco={sk.preco}
-                                    imagem={sk.imagens[0] ?? ""}
-                                />
-                            ))
+                            termo_pesquisado ? `Resultados para: ${termo_pesquisado}` : "Skin Care"
                         }
-                    </section>
+                    </span>
+                    < hr />
+                </div>
 
-                </main>
-            </>
-        )
-    }
+                <section className="cards">
+                    {
+                        skinCare.map((sk: SkinCare) => (
+                            <CardProduto
+                                key={sk.id}
+                                nome={sk.nome}
+                                descricao={sk.descricao}
+                                preco={sk.preco}
+                                imagem={sk.imagens[0] ?? ""}
+                            />
+                        ))
+                    }
+                </section>
+
+            </main>
+            <Footer />
+        </>
+    )
+}

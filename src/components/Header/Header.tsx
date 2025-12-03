@@ -60,7 +60,7 @@ export default function Header() {
                                 <nav className="container_esquerda container_palavras" id="container_esquerda">
                                     <a href="">Promoções</a>
                                     <a href="">Presentes</a>
-                                    <a href="">Skin Care</a>
+                                    <a href="">Maquiagem</a>
                                     <a href="">Corpo & Banho</a>
                                 </nav>
                             </Nav.Item>

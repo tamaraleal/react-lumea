@@ -8,12 +8,12 @@
 
 :root {
   --corBackground: #F8FBFF;
-  --corPrincipal: #95BCEA;
+  --corPrincipal: #1B447A;
   --corCard: #E6EFFA;
   --corFontEscura: #000000;
   --alturaRodapé: 60px;
   --fontLogo: font-family: "Tangerine", cursive;
-  --fontComplementar: font-family: "Bona Nova SC", serif;
+  --fontComplementar: font-family: "Darker Grotesque", sans-serif;
 }
 
 body {
