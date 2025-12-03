@@ -1,0 +1,115 @@
+header {
+    background-color: #95BCEA;
+}
+
+.container_cabecalho {
+    display: flex;
+    justify-content: space-between;
+    max-width: 90%;
+    width: 1440px;
+    margin: 0 auto;
+    height: 100%;
+    align-items: end;
+}
+
+.conteudo-nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cab_col1 {
+    align-items: center;
+    gap: 40px
+}
+
+.barra_pesquisa_container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.campo_pesquisa {
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    height: 30px;
+    font-size: 16px;
+    transition: .5s;
+}
+
+.campo_pesquisa_f {
+    padding: 5px 16px;
+    width: 30px;
+}
+
+.campo_pesquisa_a {
+    padding: 5px 30px;
+    width: 200px;
+}
+
+.btn-pesquisa {
+    background-color: transparent;
+    padding: 0 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    position: absolute;
+}
+
+.btn-pesquisa .icone_lupa {
+    height: 20px;
+    margin: 0;
+    margin-top: 1px;
+}
+
+.icone_lupa {
+    cursor: pointer;
+    height: 30px;
+    fill: #000000;
+}
+
+.container_esquerda {
+    display: flex;
+    gap: 40px;
+}
+
+nav a {
+    font-family: "Tangerine", cursive;
+    text-decoration: none;
+    color: #000000;
+    font-size: 30px;
+}
+
+.icone_user {
+    cursor: pointer;
+    height: 30px;
+    display: flex;
+    justify-self: center;
+    margin-bottom: 15px;
+}
+
+.container_direita {
+    display: flex;
+    gap: 40px;
+
+}
+
+.lumea_logo {
+    width: 110px;
+    display: flex;
+}
+
+@media screen and (max-width: 768px) {
+    .me-auto {
+        align-items: end;
+    }
+
+    .lumea_logo {
+        margin: 1rem 0;
+    }
+
+    .icone_user {
+        margin-bottom: 5px;
+    }
+}
