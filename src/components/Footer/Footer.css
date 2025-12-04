@@ -11,6 +11,8 @@ footer p {
     font-family: var(--fontComplementar);
     text-align: center;
     font-size: 20px;
+    color: #fff;
+    padding-top: 15px;
 }
 
 .rodape {
@@ -18,9 +20,13 @@ footer p {
 }
 
 .whatsapp {
-    width: 30px;
+    width: 22px;
 }
 
 .insta {
-    width: 30px;
+    width: 22px;
+}
+
+.redes_sociais {
+    padding-top: 10px;
 }

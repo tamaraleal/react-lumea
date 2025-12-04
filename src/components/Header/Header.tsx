@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom';
 import './Header.css'
 import { Nav, Navbar } from 'react-bootstrap';
 import { useState } from 'react';
-import lumea_logo from '../../assets/img/logo.png'
+import lumea_logo from '../../assets/img/lumea_logo_branca.png'
 
 export default function Header() {
     const [pesquisa, setPesquisa] = useState<string>("");

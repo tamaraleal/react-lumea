@@ -4,7 +4,6 @@ header {
 
 .container_cabecalho {
     display: flex;
-    justify-content: space-between;
     max-width: 90%;
     width: 1440px;
     margin: 0 auto;
@@ -19,10 +18,6 @@ header {
     align-items: center;
 }
 
-.cab_col1 {
-    align-items: center;
-    gap: 40px
-}
 
 .barra_pesquisa_container {
     display: flex;
@@ -88,11 +83,13 @@ nav a {
     justify-self: end;
     margin-bottom: 15px;
     fill: var(--corBackground);
+    padding-right: 80px;
 }
 
 .container_direita {
     display: flex;
     gap: 40px;
+    padding-right: 80px;
 
 }
 
