@@ -127,6 +127,7 @@ export default function Cadastro() {
             <Header />
             <main>
                 <h1 className="acessivel">tela de cadastro e listagem de produtos</h1>
+                <iframe title="GraficoLumea" width="600" height="373.5" src="https://app.powerbi.com/view?r=eyJrIjoiMjc1OWMzMDAtNmIxMi00ZWZmLTkzZTctNTIxNDgwOWEyZTk1IiwidCI6ImIxMDUxYzRiLTNiOTQtNDFhYi05NDQxLWU3M2E3MjM0MmZkZCJ9" frameborder="0" allowFullScreen="true"></iframe>
 
                 <form onSubmit={handleSubmit} className="container_cadastro">
                     <h2>Cadastro</h2>
