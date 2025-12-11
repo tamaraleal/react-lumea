@@ -9,10 +9,11 @@ footer {
 
 footer p {
     text-align: center;
-    font-size: 15px;
+    font-size: 30px;
     color: #fff;
     padding-top: 15px;
     font-weight: 200;
+    font-family: "Tangerine", cursive;
 }
 
 .rodape {
@@ -21,10 +22,12 @@ footer p {
 
 .whatsapp {
     width: 30px;
+    padding-top: 18px;
 }
 
 .insta {
     width: 30px;
+    padding-top: 18px;
 }
 
 .redes_sociais {

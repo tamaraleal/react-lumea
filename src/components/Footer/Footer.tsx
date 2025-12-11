@@ -7,7 +7,7 @@ export default function Footer() {
         <footer>
             <section className='rodape'>
                 <div>
-                    <p>LUMÉA: SUA ESSÊNCIA EM EQUILÍBRIO, ONDE SAÚDE, BEM-ESTAR E BELEZA SE ENCONTRAM PARA TRANSFORMAR VIDAS.</p>
+                    <p>Lúmea: Sua essência em equilibrio, onde saúde, bem-estar e beleza se encontram para transformar vidas.</p>
                 </div>
 
                 <div className="redes_sociais">
@@ -16,10 +16,8 @@ export default function Footer() {
                     </a>
 
                     <a href="www.instagram.com" target="_blank">
-                        <img src={insta} alt="Visite nosso Instagram" />
+                        <img src={insta} className='insta' alt="Visite nosso Instagram" />
                     </a>
-
-                    {/* <img className="insta" src={insta} alt="icone do instagram" /> */}
                 </div>
 
             </section>
