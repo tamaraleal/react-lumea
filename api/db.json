@@ -2,60 +2,50 @@
   "users": [
     {
       "email": "lumea@estetica.com",
-      "senha": "12345678"
+      "senha": "2025"
     }
   ],
   "produtos": [
     {
       "nome": "Tônico Facial Luméa",
       "categorias": [
-        "skin care",
-        "rosto",
-        "Promoções"
+        "Skin care"
       ],
       "descricao": "Controle do brilho, remove as impurezas e minimiza o excesso de brilho do rosto.",
       "imagens": [
         "Tónico_Facial.png"
       ],
       "id": "p001",
-      "preco": 79.9,
-      "peso": 0.2
+      "preco": 79.9
     },
     {
       "nome": "Hidratante Facial Luméa",
       "categorias": [
-        "skin care",
-        "rosto"
+        "Skin Care"
       ],
       "descricao": "Oferece uma solução abrangente para manter a sua pele saudável.",
       "imagens": [
         "Hidratante_Facial.png"
       ],
       "id": "p002",
-      "preco": 89.9,
-      "peso": 0.25
+      "preco": 89.9
     },
     {
       "nome": "Protetor Solar Luméa",
       "categorias": [
-        "skin care",
-        "rosto",
-        "protetor solar",
-        "A marca"
+        "Skin Care"
       ],
       "descricao": "Oferece alta proteção ao sol. Toque seco de rápida absorção.",
       "imagens": [
         "Protetor_Solar.png"
       ],
       "id": "p003",
-      "preco": 99.9,
-      "peso": 0.2
+      "preco": 99.9
     },
     {
       "nome": "Esfoliante Corporal Luméa",
       "categorias": [
-        "skin care",
-        "corpo",
+        "Skin Care",
         "Homem"
       ],
       "descricao": "Body Scrub, esfolia e hidrata, removendo profundamente as impurezas da pele.",
@@ -63,14 +53,12 @@
         "Esfoliante_Corporal.png"
       ],
       "id": "p004",
-      "preco": 69.9,
-      "peso": 0.3
+      "preco": 69.9
     },
     {
       "nome": "Óleo Corporal Luméa",
       "categorias": [
-        "skin care",
-        "corpo",
+        "Skin Care",
         "Fragrância"
       ],
       "descricao": "Body Oil realça o brilho natural da pele, deixando-a macia e hidratada o dia todo.",
@@ -78,14 +66,12 @@
         "Óleo_Corporal.png"
       ],
       "id": "p005",
-      "preco": 84.5,
-      "peso": 0.25
+      "preco": 84.5
     },
     {
       "nome": "Sabonete Corporal Luméa",
       "categorias": [
-        "skin care",
-        "corpo",
+        "Skin Care",
         "Corpo & Banho"
       ],
       "descricao": "Suavité limpa mas sem agredir a pele, removendo as células mortas.",
@@ -93,14 +79,12 @@
         "Sabonete_Corporal.png"
       ],
       "id": "p006",
-      "preco": 39.9,
-      "peso": 0.2
+      "preco": 39.9
     },
     {
       "nome": "Máscara Facial Luméa",
       "categorias": [
-        "skin care",
-        "rosto",
+        "Skin Care",
         "Presentes"
       ],
       "descricao": "Radiance Glow foi desenvolvida para revitalizar e iluminar a pele em poucos minutos.",
@@ -108,14 +92,12 @@
         "Máscara_Facial.png"
       ],
       "id": "p007",
-      "preco": 59.9,
-      "peso": 0.1
+      "preco": 59.9
     },
     {
       "nome": "Água Micelar Luméa",
       "categorias": [
-        "skin care",
-        "rosto",
+        "Skin Care",
         "Maquiagem"
       ],
       "descricao": "Micellar Water remove impurezas, maquiagem e oleosidade sem agredir a pele.",
@@ -123,15 +105,12 @@
         "Água_Micelar.png"
       ],
       "id": "p008",
-      "preco": 49.9,
-      "peso": 0.25
+      "preco": 49.9
     },
     {
       "nome": "Antissinais Reparador Luméa",
       "categorias": [
-        "skin care",
-        "rosto",
-        "anti-idade",
+        "Skin Care",
         "Homem"
       ],
       "descricao": "Anti-Wrinkle Cream foi desenvolvido para reparar, hidratar e restaurar a firmeza da pele.",
@@ -139,8 +118,7 @@
         "Creme_AntiRugas.png"
       ],
       "id": "p009",
-      "preco": 109.9,
-      "peso": 0.2
+      "preco": 109.9
     },
     {
       "nome": "Rímel Lux Gold",
@@ -151,7 +129,7 @@
       "imagens": [
         "rimel-removebg-preview 2.svg"
       ],
-      "preco": 50,
+      "preco": 72.5,
       "id": "p1"
     },
     {
@@ -163,7 +141,7 @@
       "imagens": [
         "Batom_Luméa_Vermelho_Brilhante-removebg-preview 2.svg"
       ],
-      "preco": 50,
+      "preco": 65,
       "id": "p2"
     },
     {
@@ -175,7 +153,7 @@
       "imagens": [
         "Base_de_Maquilhagem_Luméa_200ml-removebg-preview 2.svg"
       ],
-      "preco": 50,
+      "preco": 103.99,
       "id": "p3"
     },
     {
@@ -187,7 +165,7 @@
       "imagens": [
         "paleta_marca_luméa-removebg-preview 2.svg"
       ],
-      "preco": 50,
+      "preco": 99.90,
       "id": "p4"
     },
     {
@@ -199,7 +177,7 @@
       "imagens": [
         "iluminador-removebg-preview 2.svg"
       ],
-      "preco": 50,
+      "preco": 53.99,
       "id": "p5"
     },
     {
@@ -211,7 +189,7 @@
       "imagens": [
         "blush_glow_touch-removebg-preview 2.svg"
       ],
-      "preco": 50,
+      "preco": 105,
       "id": "p6"
     },
     {
@@ -223,7 +201,7 @@
       "imagens": [
         "corretivo__3_-removebg-preview 2.svg"
       ],
-      "preco": 50,
+      "preco": 89.90,
       "id": "p7"
     },
     {
@@ -235,7 +213,7 @@
       "imagens": [
         "Lápis_de_Boca_Contour_Perfect-removebg-preview 2.svg"
       ],
-      "preco": 50,
+      "preco": 60,
       "id": "p8"
     },
     {
@@ -247,7 +225,7 @@
       "imagens": [
         "Brilho Dourado Luméa.png"
       ],
-      "preco": 50,
+      "preco": 85.5,
       "id": "p9"
     }
   ]
